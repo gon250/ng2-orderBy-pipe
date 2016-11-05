@@ -17,5 +17,6 @@ export class OrderByDate implements PipeTransform {
                 return new Date(b).getTime() - new Date(a).getTime() 
             });
         }
+        return values;
     }
  }
