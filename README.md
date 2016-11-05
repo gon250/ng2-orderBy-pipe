@@ -1,2 +1,2 @@
 # ng2-orderBy-pipe
-Angular 2 pipe - OrderBy
+A generic Angular 2 pipe to OrderBy String, Number, Date & Array
