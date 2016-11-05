@@ -4,7 +4,7 @@ import { isNull } from '../utils/utils';
     name: 'orderByDate'
 })
 export class OrderByDate implements PipeTransform {
-    transform(values: number[], filter: any): any {
+    transform(values: number[], filter: string): any {
         if(isNull(values)) {
             return null;
         }
