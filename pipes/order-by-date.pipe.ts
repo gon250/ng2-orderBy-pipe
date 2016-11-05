@@ -4,12 +4,18 @@ import { isNull } from '../utils/utils';
     name: 'orderByDate'
 })
 export class OrderByDate implements PipeTransform {
-    transform(values: number[], filter: string): any {
+    transform(values: number[], filter?: string): any {
         if(isNull(values)) {
             return null;
         }
-        values.sort(function(a,b) { 
-            return new Date(a).getTime() - new Date(b).getTime() 
-        });
+        if (filter === 'descending'){
+            values.sort(function(a,b) { 
+                return new Date(a).getTime() - new Date(b).getTime() 
+            });
+        }else{
+            values.sort(function(a,b) { 
+                return new Date(b).getTime() - new Date(a).getTime() 
+            });
+        }
     }
  }
