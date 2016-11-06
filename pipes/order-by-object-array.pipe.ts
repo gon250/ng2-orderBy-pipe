@@ -4,17 +4,10 @@ import { isNull, isNumber, isString } from '../utils/utils';
     name: 'orderByArrayObject'
 })
 export class orderByArrayObject implements PipeTransform {
-    // filter is going to contain the type to manage how order the array.
-    transform(values: any[], filter: any): any {
+    transform(values: any[], filter: any, orderType: any): any {
         if(isNull(values)) {return null; }
 
-        if(isNumber(filter)){
-            //TODO: order by number
-        }
-
-        if(isString(filter)){
-            //TODO: order by string
-        }
+        
 
         return values;
     }
