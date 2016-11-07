@@ -27,5 +27,5 @@ export class orderByArrayObject implements PipeTransform {
     function OrderByArray<T, K keyof T>(values: T[], orderType: K) {
         ...
     }
-    */ç
+    */
  }

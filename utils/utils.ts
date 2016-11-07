@@ -34,37 +34,7 @@ export function isArray (value: any): boolean {
     return Array.isArray(value);
 }
 
-
-export function toString (value: number|string) {
-    
-    return `${value}`;
-}
-
-export function toArray (object: any): Array<any> {
-    
-    return isArray(object) ? object : Object.keys(object).map((key) => {
-        return object[key];
-    });
-}
-
-export function count (input: any): any {
-    
-    if (!isArray(input) || !isObject(input) || !isString(input)) {
-        return input;
-    }
-    
-    if (isObject(input)) {
-        return Object.keys(input).map((value) => input[value]).length;
-    }
-    
-    return input.length;
-}
-
-export function empty (input: any): any {
-    
-    if (!isArray(input)) {
-        return input;
-    }
-        
-    return input.length === 0;
+export function isDate(value) {
+    var dateWrapper = new Date(value);
+    return !isNaN(dateWrapper.getDate());
 }
