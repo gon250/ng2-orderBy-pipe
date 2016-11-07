@@ -4,7 +4,7 @@ import { isNull } from '../utils/utils';
     name: 'orderByString'
 })
 export class OrderByString implements PipeTransform {
-    transform(values: string[], filter?: any): any {
+    transform(values: string[], filter?: string): any {
         if(isNull(values)) { return null; }
         if (filter === 'descending'){
             values.sort((a,b) => 0 - (a > b ? 1 : -1));
