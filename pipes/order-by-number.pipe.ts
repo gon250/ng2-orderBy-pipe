@@ -4,7 +4,7 @@ import { isNull } from '../utils/utils';
     name: 'orderByNumber'
 })
 export class OrderByNumber implements PipeTransform {
-    transform(values: number[], filter?: string): any {
+    transform(values: number[], filter?: string): number[] {
         if(isNull(values)) {  return null; }
         if (filter === 'descending'){
             values.sort(function(a: number, b: number){return b-a});
