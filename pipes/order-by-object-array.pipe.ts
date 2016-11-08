@@ -4,12 +4,12 @@ import { isNull, isNumber, isString } from '../utils/utils';
     name: 'orderByArrayObject'
 })
 export class orderByArrayObject implements PipeTransform {
-    transform(values: any[], orderType: string, filter: string): any {
+    transform(values: any[], orderType: string, filter: string): any[] {
         if(isNull(values)) {return null; }
         return this.OrderByArray(values, orderType);
     }
 
-    OrderByArray(values: any[], orderType: any) { //TODO: implement filter option.
+    OrderByArray(values: any[], orderType: string) : any[] { //TODO: implement filter option.
         return values.sort((a, b) => {
             if (a[orderType] < b[orderType]) {
                 return -1;
