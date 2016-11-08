@@ -1,11 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isNull, isDate } from '../utils/utils';
+import * as MESSAGE from "../utils/messages";
 @Pipe({
     name: 'orderByDate'
 })
 export class OrderByDate implements PipeTransform {
     transform(values: any[], filter?: string): any {
-        if(isNull(values)) { return null; }
+        if(isNull(values)) { throw new Error(MESSAGE.ERROR_NULL);}
 
         //TODO: validate date values.
         if (filter === 'descending'){
