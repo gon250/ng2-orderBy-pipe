@@ -6,11 +6,17 @@ import { OrderByDate } from './pipes/order-by-date.pipe';
 import { orderByArrayObject } from './pipes/order-by-object-array.pipe'; 
 
 @NgModule({
+    declarations: [
+        OrderByString,
+        OrderByNumber,
+        OrderByDate,
+        OrderByArrayObject
+    ],
     exports: [
         OrderByString,
         OrderByNumber,
         OrderByDate,
-        orderByArrayObject
+        OrderByArrayObject
     ]
 })
 export class NgOrderByModule {}
