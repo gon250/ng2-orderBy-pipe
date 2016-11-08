@@ -6,7 +6,7 @@ import { isNull, isNumber, isString } from '../utils/utils';
 export class orderByArrayObject implements PipeTransform {
     transform(values: any[], orderType: string, filter: string): any {
         if(isNull(values)) {return null; }
-        return this.OrderByArray(values, orderType).map(item => item[orderType]);
+        return this.OrderByArray(values, orderType);
     }
 
     OrderByArray(values: any[], orderType: any) { //TODO: implement filter option.
