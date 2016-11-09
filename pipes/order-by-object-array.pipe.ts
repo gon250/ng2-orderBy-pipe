@@ -10,21 +10,18 @@ export class orderByArrayObject implements PipeTransform {
         return this.OrderByArray(values, orderType, filter === 'descending');
     }
 
-    OrderByArray(values: any[], orderType: string, descending: boolean): any[] { //TODO: implement filter option.
-        return values.sort((a, b) => {
-            if (a[orderType] < b[orderType]) {
-                return descending ? 1 : -1;
-            } else if (a[orderType] > b[orderType]) {
-                return descending ? -1 : 1;
-            }
-            return 0
-        });
+    OrderByArray(values: any[], orderType: string, descending: boolean): any[] { 
+        try {
+            return values.sort((a, b) => {
+                if (a[orderType] < b[orderType]) {
+                    return descending ? 1 : -1;
+                } else if (a[orderType] > b[orderType]) {
+                    return descending ? -1 : 1;
+                }
+                return 0
+            });
+        } catch (e){
+            throw e;
+        }
     }
-
-    //TODO: future update for typescript 2.1 
-    /*
-    function OrderByArray<T, K keyof T>(values: T[], orderType: K) {
-        ...
-    }
-    */
 }
