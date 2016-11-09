@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { isNull, isNumber, isString } from '../utils/utils';
 import * as MESSAGE from "../utils/messages";
 @Pipe({
-    name: 'orderByArrayObject'
+    name: 'OrderByArrayObject'
 })
-export class orderByArrayObject implements PipeTransform {
+export class OrderByArrayObject implements PipeTransform {
     transform(values: any[], orderType: string, filter: string): any[] {
         if(isNull(values)) { throw new Error(MESSAGE.ERROR_NULL);}
         return this.OrderByArray(values, orderType, filter === 'descending');
