@@ -10,11 +10,11 @@ export class OrderByDate implements PipeTransform {
         try{
             if (filter === 'descending'){
                 values.sort(function(a, b) { 
-                    return new Date(a).getTime() - new Date(b).getTime() 
+                    return new Date(a).getTime() - new Date(b).getTime();
                 });
             }else{
                 values.sort(function(a, b) { 
-                    return new Date(b).getTime() - new Date(a).getTime() 
+                    return new Date(b).getTime() - new Date(a).getTime();
                 });
             }
         } catch (e){
