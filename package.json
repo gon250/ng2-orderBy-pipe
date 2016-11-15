@@ -15,7 +15,7 @@
     "url": "git+https://github.com/gon250/ng2-orderBy-pipe.git"
   },
   "author": "Gonzalo Barba Lopez",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gon250/ng2-orderBy-pipe/issues"
   },
