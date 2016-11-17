@@ -1,6 +1,6 @@
 {
   "name": "ng2-orderby",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Angular 2 pipe - OrderBy",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",

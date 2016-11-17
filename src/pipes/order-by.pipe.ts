@@ -24,7 +24,7 @@ export class OrderBy implements PipeTransform {
         let objectPipe = new OrderByArrayObject();
 
         // Single propery to sort.
-        if (!Array.isArray(args) || (Array.isArray(args) && args.length === 1)) { 
+        if (!Array.isArray(args) || (Array.isArray(args) && args.length === 1)) {
 
             let propertyToCheck: string = !Array.isArray(args) ? args : args[0];
             let desc: boolean = this.isDescending(propertyToCheck);
@@ -46,8 +46,8 @@ export class OrderBy implements PipeTransform {
 
             // Loop over property of the array in order and sort
             args.forEach(item => {
-                let desc: boolean = this.isDescending(item);
-                let property: string = !desc ? item : item.substr(1);
+                // let desc: boolean = this.isDescending(item);
+                // let property: string = !desc ? item : item.substr(1);
                 // TODO: Implement code above
             });
 
