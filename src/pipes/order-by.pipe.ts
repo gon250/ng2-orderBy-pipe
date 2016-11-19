@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { OrderByArrayObject } from './order-by-object-array.pipe';
+import { OrderByArrayHelper } from '../utils/helper-pipe';
 @Pipe({
     name: 'orderBy'
 })
@@ -21,7 +21,6 @@ export class OrderBy implements PipeTransform {
     transform(values: any[], args: string[] = ['']): any[] { // Default sort ascending
 
         let result: any[];
-        let objectPipe = new OrderByArrayObject();
 
         // Single propery to sort.
         if (!Array.isArray(args) || (Array.isArray(args) && args.length === 1)) {
@@ -39,7 +38,7 @@ export class OrderBy implements PipeTransform {
                     ? propertyToCheck
                     : propertyToCheck.substr(1);
 
-                result = objectPipe.OrderByArray(values, property, desc);
+                result = OrderByArrayHelper(values, property, desc);
             }
         } else {
             // complex array sorting by multiple properties
