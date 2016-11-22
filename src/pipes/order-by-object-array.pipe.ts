@@ -8,6 +8,6 @@ import * as MESSAGE from '../utils/messages';
 export class OrderByArrayObject implements PipeTransform {
     transform(values: any[], orderType: string, filter: string): any[] {
         if (isNull(values)) { throw new Error(MESSAGE.ERROR_NULL); }
-        return OrderByArrayHelper(values, orderType, filter === 'descending');
+        return OrderByArrayHelper(values, orderType, filter === '-');
     }
 }
