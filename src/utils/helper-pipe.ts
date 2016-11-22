@@ -13,9 +13,9 @@ export function OrderByArrayHelper(values: any[], orderType: string, descending:
     }
 }
 
-export function OrderByDateHelper(values: any[], filter?: string): any[] {
+export function OrderByDateHelper(values: any[], descending: boolean): any[] {
     try {
-        if (filter === 'descending') {
+        if (descending) {
             values.sort(function (a, b) {
                 return new Date(a).getTime() - new Date(b).getTime();
             });
@@ -30,9 +30,9 @@ export function OrderByDateHelper(values: any[], filter?: string): any[] {
     return values;
 }
 
-export function OrderByNumberHelper(values: number[], filter?: string): number[] {
+export function OrderByNumberHelper(values: number[], descending: boolean): number[] {
     try {
-        if (filter === 'descending') {
+        if (descending) {
             values.sort(function (a: number, b: number) { return b - a; });
         } else {
             values.sort(function (a: number, b: number) { return a - b; });
@@ -43,9 +43,9 @@ export function OrderByNumberHelper(values: number[], filter?: string): number[]
     return values;
 }
 
-export function OrderByStringHelper(values: string[], filter?: string): string[] {
+export function OrderByStringHelper(values: string[], descending: boolean): string[] {
     try {
-        if (filter === 'descending') {
+        if (descending) {
             values.sort((a, b) => 0 - (a > b ? 1 : -1));
         } else {
             values.sort();
