@@ -8,7 +8,7 @@ import * as MESSAGE from '../utils/messages';
 export class OrderByString implements PipeTransform {
     transform(values: string[], filter?: string): string[] {
         if (isNull(values)) { throw new Error(MESSAGE.ERROR_NULL); }
-        return OrderByStringHelper(values, filter);
+        return OrderByStringHelper(values, filter === "-");
     }
  }
 
