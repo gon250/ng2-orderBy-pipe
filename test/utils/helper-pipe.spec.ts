@@ -5,7 +5,7 @@ import {
     OrderByStringHelper
 } from '../../src/utils/helper-pipe';
 
-const DESCENDING = 'descending';
+const DESCENDING : boolean = true;
 
 describe('OrderByDateHelper Test', () => {
     let dates = [new Date('01/01/2017'), new Date('01/01/2016'), new Date('12/31/2016')];
