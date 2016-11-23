@@ -23,7 +23,8 @@ gulp.task("lint", function () {
     var config = { formatter: "verbose", emitError: (process.env.CI) ? true : false };
 
     return gulp.src([
-        "src/**/**.ts"
+        "src/**/**.ts",
+        "test/pipe/**.ts" // TODO: before release replace for "test/**/**.ts"
     ])
         .pipe(tslint(config))
         .pipe(tslint.report());

@@ -8,6 +8,6 @@ import * as MESSAGE from '../utils/messages';
 export class OrderByDate implements PipeTransform {
     transform(values: any[], filter?: string): any {
         if (isNull(values)) { throw new Error(MESSAGE.ERROR_NULL); }
-        return OrderByDateHelper(values, filter === "-");
+        return OrderByDateHelper(values, filter === '-');
     }
  }
