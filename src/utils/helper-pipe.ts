@@ -1,6 +1,9 @@
 import { isDescending } from '../utils/utils';
 
-export function OrderByArrayHelper(values: any[], orderType: string, descending: boolean = false): any[] {
+export function OrderByArrayHelper(
+    values: any[],
+    orderType: string,
+    descending = false): any[] {
     try {
         return values.sort((a, b) => {
             if (a[orderType] < b[orderType]) {
@@ -15,7 +18,7 @@ export function OrderByArrayHelper(values: any[], orderType: string, descending:
     }
 }
 
-export function OrderByDateHelper(values: any[], descending: boolean = false): any[] {
+export function OrderByDateHelper(values: any[], descending = false): any[] {
     try {
         if (descending) {
             values.sort(function (a, b) {
@@ -32,7 +35,7 @@ export function OrderByDateHelper(values: any[], descending: boolean = false): a
     return values;
 }
 
-export function OrderByNumberHelper(values: number[], descending: boolean = false): number[] {
+export function OrderByNumberHelper(values: number[], descending = false): number[] {
     try {
         if (descending) {
             values.sort(function (a: number, b: number) { return b - a; });
@@ -45,7 +48,7 @@ export function OrderByNumberHelper(values: number[], descending: boolean = fals
     return values;
 }
 
-export function OrderByStringHelper(values: string[], descending: boolean = false): string[] {
+export function OrderByStringHelper(values: string[], descending = false): string[] {
     try {
         if (descending) {
             values.sort((a, b) => 0 - (a > b ? 1 : -1));
