@@ -1,5 +1,6 @@
 # ng2-orderBy-pipe
 
+[![devDependencies Status](https://david-dm.org/gon250/ng2-orderBy-pipe/dev-status.svg)](https://david-dm.org/gon250/ng2-orderBy-pipe?type=dev)
 [![Dependencies](https://david-dm.org/gon250/ng2-orderBy-pipe.svg)](https://david-dm.org/gon250/ng2-orderBy-pipe#info=dependencies)
 [![Build Status](https://travis-ci.org/gon250/ng2-orderBy-pipe.svg?branch=master)](https://travis-ci.org/gon250/ng2-orderBy-pipe)
 
