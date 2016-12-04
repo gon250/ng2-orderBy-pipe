@@ -5,13 +5,13 @@
 
 # Getting Started
 
-A gfoup of Angular 2 pipes to OrderBy String, number, date and complex collections.
+A group of Angular 2 pipes to OrderBy String, number, date and complex collections.
 
 
 # Install
 
 ```
-npm install ng2-orderby
+npm install ng2-orderby --save 
 ```
 
 
